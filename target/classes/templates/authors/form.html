@@ -1,0 +1,36 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Author form</title>
+</head>
+<body>
+
+<h1 th:text="${author.id == null ? 'New author' : 'Edit author'}"></h1>
+
+<form th:object="${author}"
+      method="post"
+      th:action="${author.id == null} ? @{/authors} : @{/authors/{id}(id=${author.id})}">
+
+  <div>
+    <label>Full name:</label>
+    <input type="text" th:field="*{fullName}" required>
+  </div>
+
+  <div>
+    <label>Country:</label>
+    <input type="text" th:field="*{country}">
+  </div>
+
+  <div>
+    <label>Birth date:</label>
+    <input type="date" th:field="*{birthDate}">
+  </div>
+
+  <button type="submit">Save</button>
+</form>
+
+<p><a th:href="@{/authors}">Back</a></p>
+
+</body>
+</html>
