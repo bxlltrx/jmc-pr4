@@ -8,16 +8,18 @@ import org.springframework.stereotype.Service;
 @Service
 public class ChangeEventPublisher {
 
-    private final JmsTemplate jmsTemplate;
-    private final String changesQueue;
+    private final JmsTemplate topicJmsTemplate;
+    private final String changeTopic;
 
-    public ChangeEventPublisher(JmsTemplate jmsTemplate,
-                                @Value("${app.jms.queue.changes}") String changesQueue) {
-        this.jmsTemplate = jmsTemplate;
-        this.changesQueue = changesQueue;
+    public ChangeEventPublisher(
+            JmsTemplate topicJmsTemplate,
+            @Value("${app.jms.change-topic}") String changeTopic
+    ) {
+        this.topicJmsTemplate = topicJmsTemplate;
+        this.changeTopic = changeTopic;
     }
 
     public void publish(ChangeEvent event) {
-        jmsTemplate.convertAndSend(changesQueue, event);
+        topicJmsTemplate.convertAndSend(changeTopic, event);
     }
 }

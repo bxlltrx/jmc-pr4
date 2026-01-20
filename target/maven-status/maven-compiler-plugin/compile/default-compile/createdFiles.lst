@@ -10,6 +10,7 @@ com\example\libraryrest\service\BookService.class
 com\example\libraryrest\model\Book.class
 com\example\libraryrest\jms\ChangeEvent.class
 com\example\libraryrest\exception\NotFoundException.class
+com\example\libraryrest\jms\MailNotificationListener.class
 com\example\libraryrest\web\BookRestController.class
 com\example\libraryrest\model\Author.class
 com\example\libraryrest\repo\AuthorRepository.class

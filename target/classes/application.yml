@@ -13,7 +13,6 @@ spring:
   mail:
     host: localhost
     port: 1025
-    # MailHog не поддерживает auth/TLS — отключаем явно
     properties:
       mail:
         smtp:

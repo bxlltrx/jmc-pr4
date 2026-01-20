@@ -1,5 +1,6 @@
 C:\Users\golan\lr4-jmc\src\main\java\com\example\libraryrest\dto\AuthorDto.java
 C:\Users\golan\lr4-jmc\src\main\java\com\example\libraryrest\model\Author.java
+C:\Users\golan\lr4-jmc\src\main\java\com\example\libraryrest\jms\MailNotificationListener.java
 C:\Users\golan\lr4-jmc\src\main\java\com\example\libraryrest\service\ChangeEventPublisher.java
 C:\Users\golan\lr4-jmc\src\main\java\com\example\libraryrest\web\LibraryRestApplication.java
 C:\Users\golan\lr4-jmc\src\main\java\com\example\libraryrest\web\AuthorRestController.java
